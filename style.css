@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75em; /* Matches mockup's large font */
+    margin: 40px 0; /* Increased margin for spacing as in mockup */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* Clear floats */
+}
+
+.item {
+    float: left;
+    width: 31.33%; /* 3 columns with spacing */
+    margin: 1%; /* Consistent horizontal spacing */
+    background-color: #D3D3D3; /* Gray background */
+    border: 1px solid #000; /* Black border */
+    position: relative;
+    min-height: 200px; /* Ensure consistent height for sections */
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px; /* Fixed width for titles */
+    text-align: center;
+    font-size: 1.25em;
+    padding: 5px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.chicken { background-color: #FFB6C1; }
+.beef { background-color: #FF0000; color: #FFF; } /* White text for readability */
+.sushi { background-color: #FFFF99; }
+
+p {
+    padding: 40px 15px 15px 15px; /* Top padding clears title, others for spacing */
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Tablet View (768px - 991px) */
+@media (max-width: 991px) {
+    .item {
+        width: 48%; /* 2 columns */
+        margin: 1% 1% 2% 1%; /* Add vertical spacing */
+    }
+    .item:nth-child(3) {
+        width: 98%; /* Third item full width */
+    }
+}
+
+/* Mobile View (≤767px) */
+@media (max-width: 767px) {
+    .item {
+        width: 98%; /* 1 column */
+        margin: 2% 1%; /* Consistent vertical spacing */
+    }
+}
